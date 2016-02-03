@@ -1,0 +1,444 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @light-gray;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.line.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+}
+
+.comment {
+  color: @light-gray;
+}
+
+.entity {
+  color: @syntax-text-color;
+
+  &.css {
+    color: @light-orange;
+  }
+
+  &.php {
+    &.name {
+      &.type {
+        color: @syntax-text-color;
+      }
+
+      &.type.class {
+        color: @light-orange;
+      }
+    }
+
+    &.other.inherited-class {
+      color: @light-blue;
+    }
+  }
+}
+
+.keyword {
+  color: @blue;
+
+  &.css {
+    color: @color-css-value;
+  }
+
+  &.js {
+    &.control {
+      color: @light-green;
+    }
+
+    &.operator {
+      color: @syntax-text-color;
+
+      &.delete,
+      &.new {
+        color: @light-green;
+      }
+    }
+  }
+
+  &.php {
+    &.control {
+      color: @light-green;
+    }
+
+    &.operator {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.other {
+    color: @light-green;
+
+    &.special-method {
+      color: @blue;
+    }
+
+    &.unit {
+      color: @orange;
+    }
+
+    &.phpdoc {
+      color: @light-gray;
+    }
+  }
+}
+
+.storage {
+  color: @light-green;
+
+  &.js {
+    color: @light-orange;
+  }
+
+  &.jsdoc {
+    color: @dark-gray;
+  }
+
+  &.php {
+    color: @light-green;
+  }
+}
+
+.constant {
+  color: @red;
+
+  &.css {
+    color: @color-css-value;
+  }
+
+  &.php {
+    &.character.escape {
+      color: @cyan;
+    }
+
+    &.language {
+      color: @light-green;
+    }
+
+    &.numeric {
+      color: @red;
+    }
+
+    &.other {
+      color: @syntax-text-color;
+
+      &.color {
+        color: @cyan;
+      }
+
+      &.symbol {
+        color: @light-green;
+      }
+
+      &.placeholder {
+        color: @light-green;
+      }
+    }
+  }
+}
+
+.variable {
+  color: @light-orange;
+
+  &.js {
+    color: @light-blue;
+
+    &.parameter.function {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.php {
+    &.interpolation {
+      color: darken(@red, 10%);
+    }
+
+    &.parameter.function {
+      color: @syntax-text-color;
+    }
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @light-yellow;
+
+  &.html {
+    color: @color-html-quotedstring;
+  }
+
+  &.regexp {
+    color: @cyan;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @light-gray;
+    }
+
+    &.variable {
+      color: @light-orange;
+    }
+
+    &.string,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @light-orange;
+      font-style: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @color-php-accent;
+  }
+
+}
+
+.support {
+  color: @light-blue;
+
+  &.css {
+    &.constant {
+      color: @color-css-value;
+    }
+
+    &.property-name {
+      color: @color-css-property-name;
+    }
+  }
+
+  &.js {
+
+    &.constant,
+    &.function {
+      color: @light-purple;
+    }
+  }
+
+  &.php {
+    &.function {
+      color: @light-purple;
+
+      &.any-method {
+        color: @blue;
+      }
+    }
+  }
+}
+
+.entity {
+  color: @syntax-text-color;
+
+  &.html {
+    color: @color-html-tagname;
+
+    &.attribute-name {
+      color: @color-html-attrname;
+    }
+  }
+
+  &.css {
+    &.attribute-name {
+      color: @light-orange;
+    }
+  }
+
+  &.js {
+    &.name {
+      color: @light-blue;
+
+      &.function {
+        color: @light-purple;
+      }
+    }
+  }
+
+  &.php {
+    &.class {
+      color: @light-orange;
+    }
+
+    &.namespace {
+      color: @light-blue;
+    }
+  }
+}
+
+.meta {
+  &.css {
+    &.selector {
+      color: @light-orange;
+    }
+  }
+
+  &.class {
+    color: @light-orange;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: @purple;
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-style: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @light-green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @light-green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @light-green;
+  }
+}
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}
+
+.highlight .region {
+    background-color: @syntax-gutter-background-color-selected;
+}
+
+.line-number {
+  background-color: @dark-gray;
+  border-right: solid @gray 1px;
+}
