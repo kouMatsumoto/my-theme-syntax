@@ -1,0 +1,37 @@
+.source.jade {
+  .entity {
+    &.tag.name {
+      color: @jade-tag-name;
+    }
+
+    &.attribute-name {
+      &.id {
+        color: @jade-main-color;
+      }
+
+      &.tag {
+        color: @jade-attr-name;
+      }
+    }
+  }
+
+  .constant {
+    color: @jade-main-color;
+
+    &.name.attribute.tag {
+      color: @white;
+    }
+  }
+
+  .string.quoted {
+    color: @jade-string;
+  }
+
+  .storage {
+    color: @jade-storage;
+  }
+
+  .variable {
+    color: @jade-variable;
+  }
+}
