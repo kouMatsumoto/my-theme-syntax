@@ -1,0 +1,53 @@
+.css,
+.scss {
+  &.entity {
+    &.name,
+    &.attribute-name,
+    &.class, {
+      color: @m-blue;
+    }
+  }
+
+  &.string.quoted {
+    color: inherit;
+  }
+
+  &.punctuation {
+    color: inherit;
+  }
+
+  &.meta {
+    &.property-name {
+      color: @m-green;
+    }
+
+    &.property-value {
+      color: @s-purple;
+    }
+
+    &.selector,
+    &.attribute-selector {
+      color: @m-blue;
+    }
+  }
+
+  &.constant {
+    color: @s-purple;
+  }
+
+  &.keyword {
+    color: @m-red;
+
+    &.other {
+      color: inherit;
+    }
+  }
+}
+
+.scss {
+  &.support {
+    &.function {
+      color: @m-orange;
+    }
+  }
+}

@@ -1,16 +1,16 @@
 .source.jade {
   .entity {
     &.tag.name {
-      color: @jade-tag-name;
+      color: @m-green;
     }
 
     &.attribute-name {
       &.id {
-        color: @jade-main-color;
+        color: @m-blue;
       }
 
       &.tag {
-        color: @jade-attr-name;
+        color: @m-orange;
       }
     }
 
@@ -21,7 +21,7 @@
   }
 
   .constant {
-    color: @jade-main-color;
+    color: @m-blue;
 
     &.name.attribute.tag {
       color: @white;
@@ -29,20 +29,20 @@
 
     // nbsp (ex. &nbsp;)
     &.character.entity.html {
-      color: @jade-sub-white;
+      color: @s-white;
     }
   }
 
   .string.quoted {
-    color: @jade-string;
+    color: @m-purple;
   }
 
   .storage {
-    color: @jade-storage;
+    color: @m-red;
   }
 
   .variable {
-    color: @jade-variable;
+    color: @m-pink;
   }
 
   .text {

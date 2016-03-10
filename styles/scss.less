@@ -1,0 +1,32 @@
+.scss {
+  &.entity {
+    &.name,
+    &.attribute-name,
+    &.class, {
+      color: @m-blue;
+    }
+  }
+
+  &.string.quoted {
+    color: inherit;
+  }
+
+  &.punctuation {
+    color: inherit;
+  }
+
+  &.meta {
+    &.property-name {
+      color: @m-green;
+    }
+
+    &.selector,
+    &.attribute-selector {
+      color: @m-blue;
+    }
+  }
+
+  &.constant {
+    color: @s-purple;
+  }
+}

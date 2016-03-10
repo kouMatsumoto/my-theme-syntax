@@ -71,9 +71,6 @@ atom-text-editor .search-results .marker.current-result .region {
 .entity {
   color: @syntax-text-color;
 
-  &.css {
-    color: @light-orange;
-  }
 
   &.php {
     &.name {
@@ -94,10 +91,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
 .keyword {
   color: @blue;
-
-  &.css {
-    color: @color-css-value;
-  }
 
   &.js {
     &.control {
@@ -125,19 +118,7 @@ atom-text-editor .search-results .marker.current-result .region {
   }
 
   &.other {
-    color: @light-green;
-
-    &.special-method {
-      color: @blue;
-    }
-
-    &.unit {
-      color: @orange;
-    }
-
-    &.phpdoc {
-      color: @light-gray;
-    }
+    color: inherit;
   }
 }
 
@@ -158,12 +139,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .constant {
-  color: @red;
-
-  &.css {
-    color: @color-css-value;
-  }
-
   &.php {
     &.character.escape {
       color: @cyan;
@@ -281,20 +256,7 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .support {
-  color: @light-blue;
-
-  &.css {
-    &.constant {
-      color: @color-css-value;
-    }
-
-    &.property-name {
-      color: @color-css-property-name;
-    }
-  }
-
   &.js {
-
     &.constant,
     &.function {
       color: @light-purple;
@@ -314,12 +276,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
 .entity {
   color: @syntax-text-color;
-
-  &.css {
-    &.attribute-name {
-      color: @light-orange;
-    }
-  }
 
   &.js {
     &.name {
@@ -343,11 +299,7 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .meta {
-  &.css {
-    &.selector {
-      color: @light-orange;
-    }
-  }
+  color: inherit;
 
   &.class {
     color: @light-orange;
@@ -359,10 +311,6 @@ atom-text-editor .search-results .marker.current-result .region {
 
   &.require {
     color: @blue;
-  }
-
-  &.selector {
-    color: @purple;
   }
 
   &.separator {
@@ -436,4 +384,5 @@ atom-text-editor[mini] .scroll-view {
 }
 
 @import "html";
+@import "css";
 @import "jade";
