@@ -13,6 +13,11 @@
         color: @jade-attr-name;
       }
     }
+
+    // &; (ex. &nbsp;)
+    &.punctuation.definition.html {
+      color: @white;
+    }
   }
 
   .constant {
@@ -20,6 +25,11 @@
 
     &.name.attribute.tag {
       color: @white;
+    }
+
+    // nbsp (ex. &nbsp;)
+    &.character.entity.html {
+      color: @jade-sub-white;
     }
   }
 
@@ -33,5 +43,9 @@
 
   .variable {
     color: @jade-variable;
+  }
+
+  .text {
+    color: @white;
   }
 }

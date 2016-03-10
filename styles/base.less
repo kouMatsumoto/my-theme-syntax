@@ -315,14 +315,6 @@ atom-text-editor .search-results .marker.current-result .region {
 .entity {
   color: @syntax-text-color;
 
-  &.html {
-    color: @color-html-tagname;
-
-    &.attribute-name {
-      color: @color-html-attrname;
-    }
-  }
-
   &.css {
     &.attribute-name {
       color: @light-orange;
@@ -443,4 +435,5 @@ atom-text-editor[mini] .scroll-view {
   border-right: solid @gray 1px;
 }
 
+@import "html";
 @import "jade";

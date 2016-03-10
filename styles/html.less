@@ -1,0 +1,35 @@
+.html {
+  &.entity {
+    &.name {
+      &.tag {
+        color: @jade-tag-name;
+      }
+    }
+
+    &.attribute-name {
+      color: @jade-main-color;
+    }
+  }
+
+  &.string.quoted {
+    color: @jade-string;
+  }
+
+  &.punctuation {
+    &.definition {
+      &.tag {
+        color: @jade-tag-name;
+      }
+
+      &.string {
+        color: inherit;
+      }
+    }
+  }
+
+  &.meta {
+    &.doctype {
+      color: @jade-tag-name;
+    }
+  }
+}
