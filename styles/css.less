@@ -9,7 +9,7 @@
   }
 
   &.string.quoted {
-    color: inherit;
+    color: @m-teal;
   }
 
   &.punctuation {
@@ -22,7 +22,7 @@
     }
 
     &.property-value {
-      color: @s-purple;
+      color: @m-blue;
     }
 
     &.selector,
@@ -39,12 +39,26 @@
     color: @m-red;
 
     &.other {
-      color: inherit;
+      &.unit {
+        color: @s-purple;
+      }
+    }
+  }
+
+  &.support {
+    .property-value {
+      color: @s-purple;
     }
   }
 }
 
 .scss {
+  &.entity {
+    &.name.tag.reference {
+      color: @m-orange;
+    }
+  }
+
   &.support {
     &.function {
       color: @m-orange;

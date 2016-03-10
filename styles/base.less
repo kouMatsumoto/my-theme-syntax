@@ -69,9 +69,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .entity {
-  color: @syntax-text-color;
-
-
   &.php {
     &.name {
       &.type {
@@ -230,7 +227,7 @@ atom-text-editor .search-results .marker.current-result .region {
     &.string,
     &.parameters,
     &.array {
-      color: @syntax-text-color;
+      color: inherit;
     }
 
     &.heading,
@@ -239,12 +236,10 @@ atom-text-editor .search-results .marker.current-result .region {
     }
 
     &.bold {
-      color: @light-orange;
       font-style: bold;
     }
 
     &.italic {
-      color: @purple;
       font-style: italic;
     }
   }
@@ -275,8 +270,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .entity {
-  color: @syntax-text-color;
-
   &.js {
     &.name {
       color: @light-blue;
