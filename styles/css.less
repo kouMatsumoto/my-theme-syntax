@@ -5,12 +5,16 @@
     &.name,
     &.attribute-name,
     &.class, {
-      color: @m-blue;
+      color: @css-selector;
+    }
+
+    &.name.tag.reference {
+      color: @css-reference;
     }
   }
 
   &.string.quoted {
-    color: @m-teal;
+    color: @css-string;
   }
 
   &.punctuation {
@@ -18,18 +22,18 @@
   }
 
   &.property-name {
-    color: @m-green;
+    color: @css-propaty;
   }
 
   &.meta {
     &.selector,
     &.attribute-selector {
-      color: @m-blue;
+      color: @css-selector;
     }
   }
 
   &.constant {
-    color: @s-purple;
+    color: @css-value;
   }
 
   &.keyword {
@@ -37,29 +41,30 @@
 
     &.other {
       &.unit {
-        color: @s-purple;
+        color: @css-value;
       }
     }
   }
 
   &.support {
     .property-value {
-      color: @s-purple;
+      color: @css-value;
     }
-  }
-}
 
-.scss,
-.less {
-  &.entity {
-    &.name.tag.reference {
-      color: @m-orange;
-    }
-  }
-
-  &.support {
     &.function {
-      color: @m-orange;
+      color: @css-function;
+    }
+  }
+
+  &.variable {
+    color: @css-param;
+
+    &.meta.set {
+      color: inherit;
+    }
+
+    &.parameter {
+      color: @css-string;
     }
   }
 }
