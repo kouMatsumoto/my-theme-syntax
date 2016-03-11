@@ -1,6 +1,6 @@
-
 .css,
-.scss {
+.scss,
+.less {
   &.entity {
     &.name,
     &.attribute-name,
@@ -17,11 +17,11 @@
     color: inherit;
   }
 
-  &.meta {
-    &.property-name {
-      color: @m-green;
-    }
+  &.property-name {
+    color: @m-green;
+  }
 
+  &.meta {
     &.selector,
     &.attribute-selector {
       color: @m-blue;
@@ -49,7 +49,8 @@
   }
 }
 
-.scss {
+.scss,
+.less {
   &.entity {
     &.name.tag.reference {
       color: @m-orange;

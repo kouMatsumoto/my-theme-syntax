@@ -1,12 +1,16 @@
-.source.js {
+.js {
   &.entity {
-    .name.function {
-      color: @m-blue;
+    &.name.function {
+      color: @js-method;
+    }
+
+    &.object {
+      color: @js-object;
     }
   }
 
   &.string.quoted {
-
+    color: @js-string;
   }
 
   &.punctuation {
@@ -22,32 +26,48 @@
   }
 
   &.keyword {
+    &.operator {
+      &.new {
+        color: @js-ctrl-keyword;
+      }
+    }
 
+    &.control {
+      color: @js-ctrl-keyword;
+    }
   }
 
   &.support {
     &.class {
-      color: @t-orange;
+      color: @js-object;
     }
 
     &.dom {
-      color: @t-red;
+      color: @js-prop;
     }
   }
 
   &.variable {
     &.object {
-      color: @t-orange;
+      color: @js-object;
     }
 
     &.property {
-      color: @t-red;
+      color: @js-prop;
+    }
+
+    &.parameter {
+      color: @js-param;
     }
   }
 
   &.storage {
-    &.fuction {
-      color: @m-green;
+    &.type {
+      color: @js-ctrl-type;
+    }
+
+    &.modifier {
+      color: @js-ctrl-type;
     }
   }
 }

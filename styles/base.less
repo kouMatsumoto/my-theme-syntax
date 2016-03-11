@@ -87,23 +87,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .keyword {
-  color: @blue;
-
-  &.js {
-    &.control {
-      color: @light-green;
-    }
-
-    &.operator {
-      color: @syntax-text-color;
-
-      &.delete,
-      &.new {
-        color: @light-green;
-      }
-    }
-  }
-
   &.php {
     &.control {
       color: @light-green;
@@ -114,22 +97,9 @@ atom-text-editor .search-results .marker.current-result .region {
     }
   }
 
-  &.other {
-    color: inherit;
-  }
 }
 
 .storage {
-  color: @light-green;
-
-  &.js {
-    color: @light-orange;
-  }
-
-  &.jsdoc {
-    color: @dark-gray;
-  }
-
   &.php {
     color: @light-green;
   }
@@ -168,16 +138,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .variable {
-  color: @light-orange;
-
-  &.js {
-    color: @light-blue;
-
-    &.parameter.function {
-      color: @syntax-text-color;
-    }
-  }
-
   &.php {
     &.interpolation {
       color: darken(@red, 10%);
@@ -195,20 +155,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .string {
-  color: @light-yellow;
-
-  &.html {
-    color: @color-html-quotedstring;
-  }
-
-  &.regexp {
-    color: @cyan;
-
-    .source.ruby.embedded {
-      color: @orange;
-    }
-  }
-
   &.other.link {
     color: @red;
   }
@@ -251,13 +197,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .support {
-  &.js {
-    &.constant,
-    &.function {
-      color: @light-purple;
-    }
-  }
-
   &.php {
     &.function {
       color: @light-purple;
@@ -270,16 +209,6 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .entity {
-  &.js {
-    &.name {
-      color: @light-blue;
-
-      &.function {
-        color: @light-purple;
-      }
-    }
-  }
-
   &.php {
     &.class {
       color: @light-orange;
