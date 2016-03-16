@@ -22,7 +22,9 @@
   }
 
   &.constant {
-
+    &.numeric {
+      color: @js-const;
+    }
   }
 
   &.keyword {
@@ -38,7 +40,8 @@
   }
 
   &.support {
-    &.class {
+    &.class,
+    &.constant {
       color: @js-object;
     }
 
