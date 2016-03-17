@@ -10,10 +10,20 @@
 .js-ctrl-type {
   color: @light-blue-a100;
 }
+.js-white {
+  color: @gray-200;
+}
+.js-variable {
+  color: @amber-100;
+}
 
 
 
 .js {
+  &.source {
+    &:extend(.js-variable);
+  }
+
   &.entity {
     &.name.function {
       &:extend(.js-main-color);
@@ -29,11 +39,14 @@
   }
 
   &.punctuation {
-
+    &:extend(.js-white);
   }
 
   &.meta {
-
+    &.brace,
+    &.delimiter {
+      &:extend(.js-white);
+    }
   }
 
   &.constant {
@@ -43,6 +56,8 @@
   }
 
   &.keyword {
+    &:extend(.js-white);
+
     &.operator {
       &.new {
         &:extend(.js-ctrl-keyword);
