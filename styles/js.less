@@ -1,11 +1,26 @@
+// color style for extend class.
+// below class is only used in this file.
+// so, if want to change class name, replace in this file.
+.js-main-color {
+  color: @orange-300;
+}
+.js-ctrl-keyword {
+  color: @green-a200;
+}
+.js-ctrl-type {
+  color: @blue-a100;
+}
+
+
+
 .js {
   &.entity {
     &.name.function {
-      color: @js-method;
+      &:extend(.js-main-color);
     }
 
     &.object {
-      color: @js-object;
+      &:extend(.js-main-color);
     }
   }
 
@@ -30,37 +45,37 @@
   &.keyword {
     &.operator {
       &.new {
-        color: @js-ctrl-keyword;
+        &:extend(.js-ctrl-keyword);
       }
     }
 
     &.control {
-      color: @js-ctrl-keyword;
+      &:extend(.js-ctrl-keyword);
     }
   }
 
   &.support {
     &.class,
     &.constant {
-      color: @js-object;
+      &:extend(.js-main-color);
     }
 
     &.dom {
-      color: @js-prop;
+      &:extend(.js-main-color);
     }
 
     &.function {
-      color: @js-method;
+      &:extend(.js-main-color);
     }
   }
 
   &.variable {
     &.object {
-      color: @js-object;
+      &:extend(.js-main-color);
     }
 
     &.property {
-      color: @js-prop;
+      &:extend(.js-main-color);
     }
 
     &.parameter {
@@ -68,17 +83,17 @@
     }
 
     &.language {
-      color: @js-object;
+      &:extend(.js-main-color);
     }
   }
 
   &.storage {
     &.type {
-      color: @js-ctrl-type;
+      &:extend(.js-ctrl-type);
     }
 
     &.modifier {
-      color: @js-ctrl-type;
+      &:extend(.js-ctrl-type);
     }
   }
 }
