@@ -9,7 +9,16 @@ atom-text-editor, :host {
   }
 
   .indent-guide {
+    box-shadow: inset 1px 0 @black;
     color: @syntax-indent-guide-color;
+
+    &:nth-child(odd) {
+      box-shadow: inset 1px 0 #39393C;
+    }
+
+    &:first-child {
+      box-shadow: inset 1px 0 @black;
+    }
   }
 
   .invisible-character {
@@ -28,6 +37,11 @@ atom-text-editor, :host {
 
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
+      }
+
+      .icon-right {
+        // to prevent mistake click of toggle icon
+        margin-left: .85rem;
       }
     }
   }
